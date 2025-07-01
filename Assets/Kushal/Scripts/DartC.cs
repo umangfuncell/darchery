@@ -710,16 +710,15 @@ if (linePoints.Count > 0)
         if (!isSniperTimerRunning && !GameManager.instance.isTutorial)
         {
             // Find fill image (child: Canvas/Image)
-            if (sniperTimerImage == null)
-            {
-                Transform canvas = activeCrossIcon.transform.Find("Canvas");
-                if (canvas)
-                {
-                    Transform img = canvas.Find("Image");
-                    if (img)
-                        sniperTimerImage = img.GetComponent<Image>();
-                }
-            }
+           if (sniperTimerImage == null)
+{
+    Transform canvas = activeCrossIcon.transform.Find("Canvas");
+    if (canvas)
+    {
+        sniperTimerImage = canvas.GetComponentInChildren<Image>(true); // true = include inactive
+    }
+}
+
             // Start the timer
             if (sniperTimerRoutine != null)
                 StopCoroutine(sniperTimerRoutine);

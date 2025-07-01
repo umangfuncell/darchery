@@ -60,7 +60,7 @@ void Start()
 
  private void OnCollisionEnter(Collision collision)
 {
-   // if (!collision.gameObject.CompareTag("Dart")) return;
+    if (!collision.gameObject.CompareTag("Dart")) return;
 
 
     StartCoroutine(HandleDartScoringAfterPhysics(collision));
@@ -83,6 +83,7 @@ private IEnumerator HandleDartScoringAfterPhysics(Collision collision)
     yield return new WaitForEndOfFrame(); // Ensures all physics/collision calls finish
 // Only process if THIS collider is the nearest ScoreArea to the dart tip
 GameObject dartG = collision.gameObject;
+    if (!collision.gameObject.CompareTag("Dart")) yield break;
 Debug.LogError("Safe Area: "+ this.gameObject + " Dart: "+ dartG); 
  var scoringStatus = dartG.GetComponent<Dart>();
     if (scoringStatus != null && scoringStatus.hasScored) yield break;
