@@ -16,7 +16,7 @@ public bool scoredOnBoard = false;
     [SerializeField] CinemachineImpulseSource impulseSource;
 
     public bool Release { get => release; set { release = value; trail.SetActive(release); followCam.SetActive(release); } }
-public ScoreArea scoreArea;
+// public ScoreArea scoreArea;
   
 
 

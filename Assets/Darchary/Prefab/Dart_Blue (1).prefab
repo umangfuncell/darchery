@@ -603,6 +603,7 @@ GameObject:
   - component: {fileID: 7956303178318887141}
   - component: {fileID: 4403145491312306541}
   - component: {fileID: 8114163822459912403}
+  - component: {fileID: 5448228854300356337}
   m_Layer: 0
   m_Name: Dart_Blue (1)
   m_TagString: Dart
@@ -697,7 +698,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -746,10 +747,10 @@ MonoBehaviour:
   timeToReturn: 2
   isHit: 0
   hasScored: 0
+  scoredOnBoard: 0
   followCam: {fileID: 5607081965419195584}
   trail: {fileID: 6744768116101944763}
   impulseSource: {fileID: 0}
-  scoreArea: {fileID: 0}
 --- !u!114 &8114163822459912403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -763,6 +764,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasScored: 0
+--- !u!135 &5448228854300356337
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8321200400742788691}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Radius: 0.005
+  m_Center: {x: 0.000000012057133, y: 0.000000021310141, z: 0.15}
 --- !u!1001 &2338936375366966854
 PrefabInstance:
   m_ObjectHideFlags: 0
